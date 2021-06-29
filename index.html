@@ -1,22 +1,113 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>The Hearty Slice</title>
-    <link rel="stylesheet" href="css/style..css">
+    <link rel="stylesheet" href="css/style..css" />
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
-</head>
+  </head>
 
-<body>
-<div class="intro" style="background-image: url(images/karthik-garikapati-oBbTc1VoT-0-unsplash.jpg);">
-    <h1><i>THE HEARTY SLICE DELIVERY</i></h1>
-    <p>Welcome To The Hearty Slice Delivery Webpage Where Every Order is a Greatt Taste!</p>
-</div>
-<form class="customer" style="background-image: url(images/damian-barczak-j-jXnBFahhU-unsplash.jpg);">
-    <h3>CUSTOMER DETAILS</h3>
-  <b> Customer Name</b> <input  type="text"size 20 placeholder="Customer Name"/>
-  <b>Phone Number</b> <input type="text"size 20 placeholder="Phone Number"/><br><br>
- </form >
-</body>
+  <body>
+    <div
+      class="intro"
+      style="
+        background-image: url(images/karthik-garikapati-oBbTc1VoT-0-unsplash.jpg);
+      "
+    >
+      <h1><i>THE HEARTY SLICE DELIVERY</i></h1>
+      <p>
+        Welcome To The Hearty Slice Delivery Webpage Where Every Order is a
+        Greatt Taste!
+      </p>
+    </div>
+    <form
+      class="customer"
+      style="
+        background-image: url(images/damian-barczak-j-jXnBFahhU-unsplash.jpg);
+      "
+    >
+      <h3>CUSTOMER DETAILS</h3>
+      <b> Customer Name</b>
+      <input type="text" size 20 placeholder="Customer Name" />
+      <b>Phone Number</b>
+      <input type="text" size 20 placeholder="Phone Number" /><br /><br />
+    </form>
+    <h2>PIZZA SECTION</h2>
+    <form class="pizzalist" id="pizzaitem" action="index.html" method="post">
+      <table class="pizza">
+        <tr>
+          <th>Pizza Choice</th>
+          <th>Pizza Size</th>
+          <th>Crust</th>
+          <th>Toppings</th>
+          <th>Quantity</th>
+          <th>Delivery Costs</th>
+        </tr>
+
+        <td>
+          <select class="pizzatype" id="pizzatype">
+            <option value="Peri-peri Chicken">Peri-peri Chicken</option>
+            <option value="Regina">Regina</option>
+            <option value="Veg Tikka">Veg Tikka</option>
+            <option value="BBQ Steak">BBQ Steak</option>
+            <option value="Boerewors">Boerewors</option>
+            <option value="Chicken & Mushroom">Chicken & Mushroom</option>
+            <option value="Chicken Tikka">Chicken Tikka</option>
+            <option value="Hawaiian">Hawaiian</option>
+          </select>
+        </td>
+
+        <td>
+          <select class="pizzasize" id="pizzasize">
+            <option value="450">Small</option>
+            <option value="750">Medium</option>
+            <option value="1200">Large</option>
+          </select>
+        </td>
+
+        <td>
+          <select class="pizzacrust" id="pizzacrust">
+            <option value="100">Crispy</option>
+            <option value="150">Stuffed</option>
+            <option value="200">Gluten-free</option>
+            <option value="120">Vegan-friendly</option>
+          </select>
+        </td>
+
+        <td>
+          <select class="pizzatoppings" id="toppings">
+            <option value="50">pepperoni</option>
+            <option value="60">mushroom</option>
+            <option value="70">sausage</option>
+            <option value="80">onions</option>
+            <option value="90">bacon</option>
+            <option value="100">extra cheese</option>
+            <option value="110">pepper</option>
+            <option value="120">black olives</option>
+          </select>
+        </td>
+        <td><input type="text" size="10" class="quantity" id="quantity" /></td>
+
+        <td>
+          <select class="delivery" id="delivery">
+            <option value="150">Deliver to me</option>
+            <option value="00">No Delivery</option>
+          </select>
+        </td>
+      </table>
+      <tr>
+        <td colspan="5">
+          <input
+            type="button"
+            onclick="checkout()"
+            onclick="checkout"
+            value="CHECK OUT"
+            class="btn checkout"
+            id="btn"
+          />
+        </td>
+      </tr>
+    </form>
+  </body>
+</html>
