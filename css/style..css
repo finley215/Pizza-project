@@ -13,3 +13,31 @@
 h1 {
   padding-top: 25%;
 }
+.pizzalist{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20%;
+    
+}
+#pizzatype,#toppings,#pizzacrust,#pizzasize,#delivery{
+    font-size: x-large;
+    
+}
+#quantity{
+    font-size: large;
+}
+#btn{
+    height: 100px;
+    width: 200px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: italic;
+    position: relative;
+}
+.customer{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 55%;
+}
