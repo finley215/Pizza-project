@@ -46,3 +46,6 @@ h1 {
   background-size: cover;
   padding-top: 55%;
 }
+.hide-div{
+  display: none;
+}

@@ -1,127 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>The Hearty Slice</title>
-    <link rel="stylesheet" href="css/style..css" />
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/script.js"></script>
-  </head>
 
-  <body>
-    <div
-      class="intro"
-      style="
+<head>
+  <meta charset="utf-8" />
+  <title>The Hearty Slice</title>
+  <link rel="stylesheet" href="css/style..css" />
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="intro" style="
         background-image: url(images/karthik-garikapati-oBbTc1VoT-0-unsplash.jpg);
-      "
-    >
-      <img
-        src="logo/000821-Free-Logo-Maker-create-free-italian-pizza-Logo-design-01.png"
-        id="img"
-        alt="logo"
-      />
-      <h1><i>THE HEARTY SLICE DELIVERY</i></h1>
-      <p>
-        Welcome To The Hearty Slice Delivery Webpage Where Every Order is a
-        Greatt Taste!
-      </p>
-    </div>
-    <form
-      class="customer"
-      style="
-        background-image: url(images/damian-barczak-j-jXnBFahhU-unsplash.jpg);
-      "
-    >
-      <h3>CUSTOMER DETAILS</h3>
-      <b> Customer Name</b>
-      <input type="text" size 20 placeholder="Customer Name" />
-      <b>Phone Number</b>
-      <input type="text" size 20 placeholder="Phone Number" /><br /><br />
+      ">
+    <img src="logo/000821-Free-Logo-Maker-create-free-italian-pizza-Logo-design-01.png" id="img" alt="logo" />
+    <h1><i>THE HEARTY SLICE DELIVERY</i></h1>
+    <p>
+      Welcome To The Hearty Slice Delivery Webpage Where Every Order is a
+      Greatt Taste!
+    </p>
+    <button type="button"  id="md-btn"class="btn btn-secondary">make order</button>
+    <form class="hide-div">
+      <div>
+        <h5>selet the type of crust</h5>
+        <input type="radio" value="Crispy" name="crusttype">Crispy</br> +ksh:100</input></br>
+        <input type="radio" value="Stuffed" name="crusttype">Stuffed</br> +ksh:150</input></br>
+        <input type="radio" value="Gluten-free" name="crusttype">Gluten-free</br> +ksh:200</input>
+        
+      </div>
+      <div>
+        <h5>select toppings</h5>
+        <input type="radio" value="mushroom" name="tops">mushroom</br> +ksh:50</input></br>
+        <input type="radio" value="bacon" name="tops">bacon</br> +ksh:60</input></br>
+        <input type="radio" value="sausage" name="tops">sausage</br> +ksh:70</input>
+        
+      </div>
+      <div>
+        <h5>select size</h5>
+        <input type="radio" value="mushroom" name="size">small</br> +ksh:450</input></br>
+        <input type="radio" value="medium" name="size">medium</br> +ksh:750</input></br>
+        <input type="radio" value="large" name="size">large</br> +ksh:1000</input>
+        
+      </div>
+<button type="submit" id="btn">checkout</button>
+
+<h4>your order </h4>
+<span id="yourorder"></span>
+<h4>Total Price</h4>
+<span id="totalprize"></span>
     </form>
+   
+  </div>
 
-    <form
-      class="pizzalist"
-      id="pizzaitem"
-      action="index.html"
-      method="post"
-      style="
-        background-image: url(images/mahyar-motebassem-pGA4zHvpo5E-unsplash.jpg);
-      "
-    >
-      <h2>PIZZA SECTION</h2>
-      <table class="pizza">
-        <tr>
-          <th>Pizza Choice</th>
-          <th>Pizza Size</th>
-          <th>Crust</th>
-          <th>Toppings</th>
-          <th>Quantity</th>
-          <th>Delivery Costs</th>
-        </tr>
 
-        <td>
-          <select class="pizzatype" id="pizzatype">
-            <option value="Peri-peri Chicken">Peri-peri Chicken</option>
-            <option value="Regina">Regina</option>
-            <option value="Veg Tikka">Veg Tikka</option>
-            <option value="BBQ Steak">BBQ Steak</option>
-            <option value="Boerewors">Boerewors</option>
-            <option value="Chicken & Mushroom">Chicken & Mushroom</option>
-            <option value="Chicken Tikka">Chicken Tikka</option>
-            <option value="Hawaiian">Hawaiian</option>
-          </select>
-        </td>
 
-        <td>
-          <select class="pizzasize" id="pizzasize">
-            <option value="450">Small</option>
-            <option value="750">Medium</option>
-            <option value="1200">Large</option>
-          </select>
-        </td>
 
-        <td>
-          <select class="pizzacrust" id="pizzacrust">
-            <option value="100">Crispy</option>
-            <option value="150">Stuffed</option>
-            <option value="200">Gluten-free</option>
-            <option value="120">Vegan-friendly</option>
-          </select>
-        </td>
+</body>
 
-        <td>
-          <select class="pizzatoppings" id="toppings">
-            <option value="50">pepperoni</option>
-            <option value="60">mushroom</option>
-            <option value="70">sausage</option>
-            <option value="80">onions</option>
-            <option value="90">bacon</option>
-            <option value="100">extra cheese</option>
-            <option value="110">pepper</option>
-            <option value="120">black olives</option>
-          </select>
-        </td>
-        <td><input type="text" size="10" class="quantity" id="quantity" /></td>
-
-        <td>
-          <select class="delivery" id="delivery">
-            <option value="150">Deliver to me</option>
-            <option value="00">No Delivery</option>
-          </select>
-        </td>
-      </table>
-      <tr>
-        <td colspan="5">
-          <input
-            type="button"
-            onclick="checkout()"
-            onclick="checkout"
-            value="CHECK OUT"
-            class="btn checkout"
-            id="btn"
-          />
-        </td>
-      </tr>
-    </form>
-  </body>
 </html>
